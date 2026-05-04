@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-function Form() {
+function Form({ setCity }) {
   const [input, setInput] = useState("");
 
   // Pasados 20s sin interactuar en el input, si no se envía el mismo, lo vaciamos
@@ -17,6 +17,8 @@ function Form() {
 
   const handleSubmit = (e) => {
     e.preventDefault(); // Evita que la página se recargue
+    if (!input.trim()) return;
+    setCity(input.trim());
     setInput(""); // Vaciamos el input cuando se envía
   };
 
