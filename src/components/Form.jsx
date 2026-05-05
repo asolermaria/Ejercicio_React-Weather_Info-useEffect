@@ -17,8 +17,8 @@ function Form({ setCity }) {
 
   const handleSubmit = (e) => {
     e.preventDefault(); // Evita que la página se recargue
-    if (!input.trim()) return;
-    setCity(input.trim());
+    if (!input.trim()) return; // Si el input está vacío, terminamos la función
+    setCity(input.trim()); // city cogerá el valor del input
     setInput(""); // Vaciamos el input cuando se envía
   };
 

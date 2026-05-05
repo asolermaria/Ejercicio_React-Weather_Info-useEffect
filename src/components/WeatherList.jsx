@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from "uuid";
 function WeatherList({ weather }) {
   return (
     <section>
-      {weather.slice(0,5).map((item) => ( /*Recorre los 5 primeros elementos del array*/
+      {weather.map((item) => (
         <WeatherCard key={uuidv4()} item={item} />
       ))}
     </section>
